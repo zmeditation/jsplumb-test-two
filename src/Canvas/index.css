@@ -1,0 +1,257 @@
+.canvas-container .node {
+  border: 1px solid #346789;
+  box-shadow: 2px 2px 19px #aaa;
+  -o-box-shadow: 2px 2px 19px #aaa;
+  -webkit-box-shadow: 2px 2px 19px #aaa;
+  -moz-box-shadow: 2px 2px 19px #aaa;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  opacity: 0.8;
+  width: 70px;
+  height: 50px;
+  left: 50px;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  z-index: 20;
+  position: absolute;
+  background-color: #eeeeef;
+  color: black;
+  font-family: helvetica, sans-serif;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  -webkit-transition: -webkit-box-shadow 0.15s ease-in;
+  -moz-transition: -moz-box-shadow 0.15s ease-in;
+  -o-transition: -o-box-shadow 0.15s ease-in;
+  transition: box-shadow 0.15s ease-in;
+}
+
+.canvas-container .label {
+  text-align: center;
+}
+
+.canvas-container .node:hover,
+.canvas-container .group:hover {
+  box-shadow: 2px 2px 19px #444;
+  -o-box-shadow: 2px 2px 19px #444;
+  -webkit-box-shadow: 2px 2px 19px #444;
+  -moz-box-shadow: 2px 2px 19px #444;
+  opacity: 0.9;
+}
+
+.main .group {
+  position: absolute !important ;
+  left: 200px;
+  top: 10px;
+  min-width: 200px;
+  min-height: 200px;
+  border-radius: 12px;
+  background-color: WhiteSmoke;
+  font-size: 12px;
+  cursor: move;
+  border: 1px solid #346789;
+  box-shadow: 2px 2px 19px #aaa;
+  -o-box-shadow: 2px 2px 19px #aaa;
+  -webkit-box-shadow: 2px 2px 19px #aaa;
+  -moz-box-shadow: 2px 2px 19px #aaa;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  -webkit-transition: -webkit-box-shadow 0.15s ease-in;
+  -moz-transition: -moz-box-shadow 0.15s ease-in;
+  -o-transition: -o-box-shadow 0.15s ease-in;
+  transition: box-shadow 0.15s ease-in;
+}
+
+.group .title {
+  line-height: 30px;
+  text-align: center;
+}
+
+.group.collapsed {
+  height: 40px !important;
+  min-height: 40px !important;
+}
+
+.canvas-container .active {
+  border: 1px dotted green;
+}
+
+.canvas-container .hover {
+  border: 1px dotted red;
+}
+
+.canvas-container .jtk-connector {
+  z-index: 4;
+}
+
+.canvas-container .jtk-endpoint,
+.endpointTargetLabel,
+.endpointSourceLabel {
+  z-index: 21;
+  cursor: pointer;
+}
+
+/* .canvas-container .aLabel {
+  background-color: white;
+  padding: 0.4em;
+  font: 12px sans-serif;
+  color: #444;
+  z-index: 21;
+  border: 1px dotted gray;
+  opacity: 0.8;
+  cursor: pointer;
+} */
+
+/* .canvas-container .jtk-endpoint.jtk-hover {
+  background-color: #5c96bc;
+  color: white;
+  border: 1px solid white;
+} */
+
+.canvas-container .node.ds,
+.canvas-container .jtk-endpoint.ds svg circle {
+  background-color: #0074d9;
+  stroke: #0074d9;
+}
+
+.canvas-container .node.join,
+.canvas-container .jtk-endpoint.join svg circle {
+  background-color: #39cccc;
+  stroke: #39cccc;
+}
+
+.canvas-container .jtk-endpoint.group svg circle {
+  background-color: #abc1bb;
+  stroke: #abc1bb;
+}
+
+.node.jtk-connected {
+  border: 1px solid green;
+}
+
+.jtk-drag {
+  outline: 4px solid pink !important;
+}
+
+path,
+.jtk-endpoint {
+  cursor: pointer;
+}
+
+.jtk-overlay {
+  background-color: transparent;
+}
+
+.title {
+  background-color: #abc1bb;
+  padding-right: 16px;
+  font-size: 13px;
+  height: 30px;
+}
+
+.del,
+.node-collapse {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: white;
+  padding: 1px;
+  cursor: pointer;
+  font-size: 13px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+}
+
+.del:after {
+  content: 'X';
+}
+
+.node-collapse {
+  right: 29px;
+  text-align: center;
+}
+
+.node-collapse:after {
+  content: '-';
+}
+
+.group.collapsed .node-collapse:after {
+  content: '+';
+}
+
+/* .del[delete-all] {
+  background-color: pink;
+} */
+
+.jtk-group-collapsed .node,
+.jtk-group-collapsed ul,
+.jtk-group-collapsed .container,
+.jtk-group-collapsed .name {
+  display: none;
+}
+
+.jtk-drag-hover {
+  outline: 4px solid cornflowerblue;
+}
+
+.jtk-endpoint-anchor::after {
+  position: relative;
+  left: 5px;
+  font-size: 12px;
+  top: -2px;
+  font-weight: bold;
+  color: #333;
+}
+
+.jtk-endpoint svg circle {
+  fill: #fff;
+  stroke: #7ab02c;
+  stroke-width: 1;
+}
+
+.jtk-endpoint-anchor-hover svg {
+  width: 20px;
+  height: 20px;
+}
+
+.jtk-endpoint-anchor-hover svg circle {
+  r: 9px;
+  cx: 10px;
+  cy: 10px;
+  fill: #39cccc;
+}
+
+.jtk-endpoint-anchor-hover::after {
+  left: 7px;
+  font-size: 12px;
+  top: 0px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.join_out_r::after {
+  content: 'R';
+}
+
+.join_out_l::after {
+  content: 'L';
+}
+
+.join_out_i::after {
+  content: 'I';
+  left: 6px;
+}
+
+.join_in_l::after {
+  content: 'L';
+}
+
+.join_in_r::after {
+  content: 'R';
+}

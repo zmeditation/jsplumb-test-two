@@ -1,22 +1,65 @@
 .App {
-  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.layout-page {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.menubar {
+  height: 100px;
+}
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  border: 1px solid #ccc;
+}
+
+.layout .sidebar {
+  flex: 1;
+  border: 1px solid #ccc;
+}
+
+.layout .main {
+  flex: 3;
+  position: relative;
+}
+
+.canvas-container {
+  height: 100%;
+  position: relative;
+}
+
+.menubar-button {
+  display: inline-block;
+  width: 100px;
+  margin: 10px 20px;
+  padding: 25px 20px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.menubar .menubar-button.source {
+  background-color: #0074d9;
+}
+
+.menubar .menubar-button.join {
+  background-color: #39cccc;
+}
+
+.menubar .menubar-button.group {
+  background-color: #abc1bb;
+}
+
+.menubar .menubar-button.select {
+  background-color: #dad55e;
 }
