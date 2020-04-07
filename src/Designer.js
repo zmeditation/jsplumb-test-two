@@ -170,7 +170,7 @@ export default class layout extends React.Component {
   };
 
   renderMenuBar = () => {
-    return ['SOURCE', 'SELECT', 'JOIN', 'GROUP'].map((l, i) => {
+    return ['SOURCE', 'JOIN', 'GROUP'].map((l, i) => {
       return (
         <div
           key={i}
